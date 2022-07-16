@@ -9,9 +9,7 @@ function Popular() {
         getPopular();
     }, [])
     const getPopular = async () => {
-
         const check = localStorage.getItem('popular')
-
         if (check) {
             setPopular(JSON.parse(check))
         } else {
@@ -20,8 +18,6 @@ function Popular() {
             localStorage.setItem('popular', JSON.stringify(data.recipes))
             setPopular(data.recipes)
         }
-
-
     }
 
     return (
@@ -30,8 +26,8 @@ function Popular() {
                 <h3>Popular Picks</h3>
                 <Splide options={{
                     perPage: 4,
-                    arrows:false,
-                    paginations: false,
+                    arrows: false,
+                    pagination: false,
                     drag: 'free',
                     gap: '1.5rem'
                 }}>
@@ -96,6 +92,6 @@ const Gradient = styled.div`
     position:absolute;
     width:100%;
     height:100%;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
-`
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+`;
 export default Popular
