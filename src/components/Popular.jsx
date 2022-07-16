@@ -71,7 +71,7 @@ p {
     color: #fff;
     width:100%;
     text-align:center;
-    font-weight600;
+    font-weight:600;
     font-size: 1rem;
     height:40%;
     display:flex;
